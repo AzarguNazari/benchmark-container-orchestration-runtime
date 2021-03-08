@@ -1,0 +1,14 @@
+version: '3.3'
+
+services:      
+  monitor:
+    image: monitor:final
+    deploy:
+      replicas: 1
+    networks:
+      - app
+
+networks:
+  app:
+    external: true
+       

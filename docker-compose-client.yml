@@ -1,0 +1,16 @@
+version: '3.3'
+
+services:
+  client:
+    image: client:final
+    deploy:
+      replicas: 5
+    environment:
+      application.monitor.address: monitor
+    networks:
+      - app
+    
+networks:
+  app:
+    external: true
+       
